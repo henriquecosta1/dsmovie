@@ -4,7 +4,7 @@ import './styles.css'
 import axios from "axios";
 import { BASE_URL } from "utils/requests";
 import { useEffect, useState } from "react";
-import { Movie, MoviePage } from "types/movie";
+import { MoviePage } from "types/movie";
 
 function Listing() {
 
