@@ -1,6 +1,5 @@
 import Pagination from "components/Pagination";
 import MovieCard from "components/MovieCard";
-import './styles.css'
 import axios from "axios";
 import { BASE_URL } from "utils/requests";
 import { useEffect, useState } from "react";
@@ -30,9 +29,13 @@ function Listing() {
             });
     }, [pageNumber]);
 
+    const handlePageNumber = (newPageNumber : number) => {
+        setPageNumber(newPageNumber);
+    }
+
     return (
         <>
-            <Pagination />
+            <Pagination page={page} onChange={handlePageNumber} />
 
             <div className="container">
                 <div className="row">
